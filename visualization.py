@@ -29,14 +29,14 @@ for i in [collapsed_df16, collapsed_df17, collapsed_df]:
 app = dash.Dash()
 
 app.layout = html.Div([
-    dcc.Markdown('''
-        # Case Study Submission
-        *An analysis of Net Capital Expenditure by market and cluster during 2016 and 2017*
+dcc.Markdown('''
+# Case Study Submission
+*An analysis of Net Capital Expenditure by market and cluster during 2016 and 2017*
 
-        By: Afaan Naqvi
-        ***
-        ### 1. Cluster Analysis (2016 vs 2017)
-        '''),
+By: Afaan Naqvi
+***
+### 1. Cluster Analysis (2016 vs 2017)
+'''),
     html.Div([
         html.Div([
             dcc.Graph(
@@ -78,9 +78,9 @@ app.layout = html.Div([
 
     html.Hr(),
     
-    dcc.Markdown('''
-        ### 2. Intra-Cluster Analysis (2016 through 2017)
-        '''),
+dcc.Markdown('''
+### 2. Intra-Cluster Analysis (2016 through 2017)
+'''),
     html.Div([
         html.Div([
             dcc.Graph(
@@ -120,9 +120,9 @@ app.layout = html.Div([
 
     html.Hr(),
     
-    dcc.Markdown('''
-        ### 3. Market Analysis
-        '''),
+dcc.Markdown('''
+### 3. Market Analysis
+'''),
     html.Div([
         html.Div([
             dcc.Graph(
@@ -162,9 +162,9 @@ app.layout = html.Div([
     
     html.Hr(),
     
-    dcc.Markdown('''
-        ### 4. Outlier Analysis
-        '''),
+dcc.Markdown('''
+### 4. Outlier Analysis
+'''),
     html.Div([
         dcc.Graph(
             id='nce-scatter',
@@ -198,11 +198,7 @@ app.layout = html.Div([
         ''')
     ])
 
+app.css.append_css({"external_url": "https://codepen.io/chriddyp/pen/bWLwgP.css"})
+
 if __name__ == '__main__':
     app.run_server()
-
-    app.css.append_css({"external_url": "https://codepen.io/chriddyp/pen/bWLwgP.css"})
-
-    if __name__ == '__main__':
-        app.run_server()
-
