@@ -57,7 +57,6 @@ collapsed_usf_desks = collapsed_building_df.groupby(level=[0]).sum()
 # Reset index on collpased_usf_desks to allow for joining
 collapsed_usf_desks.reset_index(inplace=True)
 
-
 # Update column names in collapsed_usf_desks to reflect they are totals (not per floor data)
 collapsed_usf_desks.rename(index=str, columns={"USF per Floor": "USF", "Desk Count per Floor": "Desk Count"}, inplace=True)
 
